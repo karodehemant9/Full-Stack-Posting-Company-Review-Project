@@ -1,0 +1,94 @@
+/* Style for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Style for the container */
+.container {
+    max-width: 600px;
+    margin: 0;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Style for the form heading */
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Style for form labels and input fields */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style for the Rating UI */
+#rating {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    cursor: pointer;
+    color: #c8c5c3;
+    transition: color 0.3s;
+    font-size: 24px;
+}
+
+.star.selected {
+    color: #d49a11;
+}
+
+/* Style for the Submit button */
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styles */
+.form-group input[type="text"],
+.form-group textarea {
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+}
