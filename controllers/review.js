@@ -30,7 +30,23 @@ exports.getReviews = ((req, res, next) => {
   Review.findAll({where: { companyName: company }})
   .then(reviews => {
     console.log(reviews);
-    res.json(reviews);
+    let avgRating = 0;
+    let sum = 0;
+    if(reviews.length > 0)
+    {
+      for(let i = 0; i < reviews.length; i++)
+      {
+        sum = sum + reviews[i].rating;
+      }
+      avgRating = sum/reviews.length;
+      console.log(avgRating);
+      res.json({companyName: company, avgRating: avgRating, reviews: reviews});
+    }
+    else
+    {
+      res.send('No data found');
+    }
+    
   })
   .catch(err => console.log(err));
 })

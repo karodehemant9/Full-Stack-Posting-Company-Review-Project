@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-
 app.use('/review', reviewRoutes);
 
 app.use('/', (req, res) =>{
@@ -23,8 +22,8 @@ app.use('/', (req, res) =>{
 
 
 sequelize
-//.sync({force: true})
-.sync()
+.sync({force: true})
+//.sync()
 .then(result =>{
     app.listen(8000);
 })

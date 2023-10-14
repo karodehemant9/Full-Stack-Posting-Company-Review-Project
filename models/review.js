@@ -7,7 +7,7 @@ const Review  = sequelize.define('review',{
   companyName: {type: Sequelize.STRING, allowNull: false},
   pros: {type: Sequelize.STRING, allowNull: false},
   cons: {type: Sequelize.STRING, allowNull: false},
-  rating: {type: Sequelize.INTEGER, allowNull: false} 
+  rating: {type: Sequelize.FLOAT, allowNull: false} 
 });
 
 module.exports = Review; 
